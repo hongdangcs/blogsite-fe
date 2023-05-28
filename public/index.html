@@ -12,27 +12,6 @@
     <link rel="icon" href="%PUBLIC_URL%/assets/favicon.svg"/>
     <script src="%PUBLIC_URL%/assets/script.js"></script>
     <title>BlogSite</title>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', () => {
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            if ($navbarBurgers.length > 0) {
-                $navbarBurgers.forEach( el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
-                });
-            }
-        });
-
-        const userProfileElement = document.querySelector(".profile-picture");
-        const subMenuWrap = document.querySelector(".sub-menu-wrap");
-        userProfileElement.addEventListener("click", () => {
-            subMenuWrap.classList.toggle("open-menu");
-        });
-    </script>
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>

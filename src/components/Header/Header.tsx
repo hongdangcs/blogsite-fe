@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 interface HeaderProps {
 
@@ -6,6 +6,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
     const user = true;
+    const [isMenuOpen, setMenuOpen] = useState(false);
     return (
         <header>
             <nav className="navbar">
@@ -13,7 +14,7 @@ const Header: React.FC<HeaderProps> = () => {
                     <a className="navbar-logo" href="/">
                         <img
                             className="navbar-logo-image"
-                            src="../assets/logo.svg"
+                            src="/assets/logo.svg"
                             alt="Blog Site"
                         />
                     </a>
@@ -34,25 +35,26 @@ const Header: React.FC<HeaderProps> = () => {
                                     <div className="write-button">
                                         <button type="submit" className="write">
                                             <img
-                                                src="../assets/write.svg"
+                                                src="/assets/write.svg"
                                                 alt="write"
                                                 style={{paddingRight: "5px"}}
                                             />
                                             Write
                                         </button>
                                     </div>
-                                    <div className="profile-picture">
+                                    <button className="profile-picture" onClick={() => setMenuOpen(!isMenuOpen)}>
                                         <img
-                                            src="../assets/profile.svg"
+                                            src="/assets/profile.svg"
                                             alt="Profile"
                                             className="user-profile-pic"
                                         />
-                                    </div>
+                                    </button>
+                                    {isMenuOpen && (
                                     <div className="sub-menu-wrap">
                                         <div className="sub-menu">
                                             <div className="user-info">
                                                 <img
-                                                    src="../assets/profile.svg"
+                                                    src="assets/profile.svg"
                                                     alt=""
                                                     className="user-profile-pic"
                                                 />
@@ -60,7 +62,7 @@ const Header: React.FC<HeaderProps> = () => {
                                             </div>
                                             <hr/>
                                             <a href="/dashboard" className="sub-menu-link">
-                                                <img src="../assets/profile.svg" className="user-profile-pic"/>
+                                                <img src="assets/profile.svg" className="user-profile-pic"/>
                                                 <p>Profile</p>
                                             </a>
                                             <a href="#" className="sub-menu-link">
@@ -72,11 +74,12 @@ const Header: React.FC<HeaderProps> = () => {
                                                 <p>Help & Support</p>
                                             </a>
                                             <a href="/logout" className="sub-menu-link">
-                                                <img src="../assets/favicon.svg" alt="logout icon"/>
+                                                <img src="assets/favicon.svg" alt="logout icon"/>
                                                 <p>Logout</p>
                                             </a>
                                         </div>
                                     </div>
+                                    )}
                                 </>
                             ) : (
                                 <div className="buttons">

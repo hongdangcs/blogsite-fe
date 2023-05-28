@@ -11,6 +11,9 @@ body{
 
 }
 
+.button:hover {
+    cursor: none;
+}
 
 .navbar {
     position: fixed;
@@ -113,10 +116,6 @@ flex {
     /* Add styling for the user profile picture here */
 }
 
-.dropdown-menu {
-    display: none;
-}
-
 .profile-picture:hover .dropdown-menu {
     display: block;
 }
@@ -128,7 +127,6 @@ flex {
     top: 100%;
     right: 10%;
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.5s;
 }
 
