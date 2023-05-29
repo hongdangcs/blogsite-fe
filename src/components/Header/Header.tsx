@@ -61,20 +61,20 @@ const Header: React.FC<HeaderProps> = () => {
                                                 <h3>Username</h3>
                                             </div>
                                             <hr/>
-                                            <a href="/dashboard" className="sub-menu-link">
+                                            <a href="/profile" className="sub-menu-link">
                                                 <img src="assets/profile.svg" className="user-profile-pic"/>
                                                 <p>Profile</p>
                                             </a>
-                                            <a href="#" className="sub-menu-link">
-                                                <img src="images/setting.png" alt="settings icons"/>
+                                            <a href="/setting" className="sub-menu-link">
+                                                <img src="/assets/setting.svg" alt="settings icons"/>
                                                 <p>Settings</p>
                                             </a>
-                                            <a href="#" className="sub-menu-link">
-                                                <img src="images/help.png" alt="help and support icon"/>
+                                            <a href="/help" className="sub-menu-link">
+                                                <img src="/assets/help.svg" alt="help and support icon"/>
                                                 <p>Help & Support</p>
                                             </a>
                                             <a href="/logout" className="sub-menu-link">
-                                                <img src="assets/favicon.svg" alt="logout icon"/>
+                                                <img src="/assets/logout.svg" alt="logout icon"/>
                                                 <p>Logout</p>
                                             </a>
                                         </div>
