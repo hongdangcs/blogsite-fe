@@ -12,7 +12,7 @@ const Footer = () => {
                             <ul>
                                 <li><a href="#">about us</a></li>
                                 <li><a href="#">our services</a></li>
-                                <li><a href="#">privacy policy</a></li>
+                                <li><a href="/terms-and-conditions">privacy policy</a></li>
                                 <li><a href="#">affiliate program</a></li>
                             </ul>
                         </div>
@@ -20,28 +20,26 @@ const Footer = () => {
                             <h4>get help</h4>
                             <ul>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a href="#">shipping</a></li>
-                                <li><a href="#">returns</a></li>
-                                <li><a href="#">order status</a></li>
+                                <li><a href="#">help center</a></li>
+                                <li><a href="#">help forum</a></li>
+                                <li><a href="#">video tutorials</a></li>
                                 <li><a href="#">payment options</a></li>
                             </ul>
                         </div>
                         <div className="footer-col">
-                            <h4>online shop</h4>
+                            <h4>Community</h4>
                             <ul>
-                                <li><a href="#">watch</a></li>
-                                <li><a href="#">bag</a></li>
-                                <li><a href="#">shoes</a></li>
-                                <li><a href="#">dress</a></li>
+                                <li><a href="#">forum</a></li>
+                                <li><a href="#">content</a></li>
                             </ul>
                         </div>
                         <div className="footer-col">
                             <h4>follow us</h4>
                             <div className="social-links">
-                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                                <a href="https://facebook.com/hongdangcseiu/" target="_blank"><img style={{ width:'40px', height:'40px' }} src="https://raw.githubusercontent.com/hongdangcseiu/HTMLCSSproject/master/images/facebook-2020-2-1.svg" className="fab"/></a>
+                                <a href="https://twitter.com/hongdangcseiu/" target="_blank"><img style={{ width:'40px', height:'40px' }} src="https://raw.githubusercontent.com/hongdangcseiu/HTMLCSSproject/master/images/twitter-6.svg" className="fab"/></a>
+                                <a href="https://instagram.com/hongdangcseiu/" target="_blank"><img style={{ width:'40px', height:'40px' }} src="https://raw.githubusercontent.com/hongdangcseiu/HTMLCSSproject/master/images/instagram-5.svg" className="fab" /></a>
+                                <a href="https://linkedin.com/in/hongdangcseiu/" target="_blank"><img style={{ width:'40px', height:'40px' }} src="https://raw.githubusercontent.com/hongdangcseiu/HTMLCSSproject/master/images/linkedin-icon.svg" className="fab" /></a>
                             </div>
                         </div>
                     </div>

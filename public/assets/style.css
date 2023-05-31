@@ -216,7 +216,7 @@ flex {
 }
 
 .page-body{
-    margin-top: 60px;
+    margin: 60px 60px 0px 60px;
 }
 
 .footer-container{
@@ -232,7 +232,7 @@ ul{
 }
 .footer{
     background-color: var(--color-heading);
-    padding: 70px 0;
+    padding: 40px 0;
 }
 .footer-col{
     width: 25%;
@@ -289,3 +289,77 @@ ul{
     color: #24262b;
     background-color: #ffffff;
 }
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.categories {
+    flex: 0 0 20%;
+}
+
+.categories h2 {
+    margin-bottom: 10px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    margin-bottom: 5px;
+}
+
+.blog-posts {
+    flex: 0 0 60%;
+    padding: 20px;
+}
+.right-home{
+    flex: 0 0 20%;
+}
+
+.blog-posts h2 {
+    margin-bottom: 10px;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(208, 215, 222);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+}
+
+.category-style{
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 100px;
+    padding: 8px 16px;
+    margin: 20px;
+    font-size: 18px;
+
+}
+
+.post {
+    display: block;
+    text-align: left;
+    width: 60%;
+    font-size: 20px;
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 24px;
+}
+
+

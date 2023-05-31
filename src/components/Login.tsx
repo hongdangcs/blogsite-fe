@@ -1,8 +1,37 @@
-import React, {useState} from 'react';
+import React, {useState, ChangeEvent, FormEvent } from 'react';
 
 const Login = () => {
-    const handleSubmit = () => {
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+
+        fetch('http://localhost:8000/api/login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        })
+            .then((response) => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    return response.json().then((data) => {
+                        alert(data.message);
+                    });
+                }
+            })
+            .then((data) => {
+                const accessToken = data.accessToken;
+                window.location.href = '/';
+                document.cookie = `access_token=${accessToken}; expires=Sat, 01 Jan 2024 00:00:00 GMT`;
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     };
     return (
         <section className="section page-body">
@@ -19,13 +48,15 @@ const Login = () => {
                         >
                             {}
                             <div className="field">
-                                <label className="label">Username</label>
+                                <label className="label">Email</label>
                                 <div className="control">
                                     <input
                                         className="input"
                                         type="text"
                                         placeholder="Enter Username"
                                         name="username"
+                                        value={email}
+                                        onChange={event => setEmail(event.target.value)}
                                         required
                                     />
                                 </div>
@@ -38,6 +69,8 @@ const Login = () => {
                                         type="password"
                                         placeholder="Enter Password"
                                         name="password"
+                                        value={password}
+                                        onChange={event => setPassword(event.target.value)}
                                         required
                                     />
                                 </div>
@@ -48,7 +81,7 @@ const Login = () => {
                             </label>
                             <div className="field">
                                 <button className="button" type="submit" style={{backgroundColor:'#577D86',color:'white',}}>
-                                    Submit
+                                    Continue
                                 </button>
                             </div>
                             <div>
